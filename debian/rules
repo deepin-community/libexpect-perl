@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installexamples:
+	dh_installexamples
+	sed -i -e'1 s,^#!/usr/local/bin/perl\b,#!/usr/bin/perl,' \
+	    $$(find debian/libexpect-perl/usr/share/doc/libexpect-perl/examples -type f)

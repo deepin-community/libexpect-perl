@@ -1,0 +1,37 @@
+Source: libexpect-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libio-pty-perl <!nocheck>,
+                     libtest-simple-perl <!nocheck>,
+                     perl
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libexpect-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libexpect-perl.git
+Homepage: https://metacpan.org/dist/Expect
+Rules-Requires-Root: no
+
+Package: libexpect-perl
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libio-pty-perl,
+         libio-stty-perl
+Description: Perl Expect interface
+ The Expect module is a successor of Comm.pl and a descendent of Chat.pl. It
+ more closely resembles the Tcl Expect language than its predecessors. It
+ does not contain any of the networking code found in Comm.pl. This would be
+ obsolete anyway given the advent of IO::Socket and external tools such as
+ netcat.
+ .
+ Expect.pm is an attempt to have more of a switch() & case: feel to make
+ decision processing more fluid. three separate types of debugging have
+ been implemented to make code production easier.
+ .
+ It is now possible to interconnect multiple file handles (and processes) much
+ like Tcl's expect. An attempt was made to enable all the features of Tcl's
+ expect.

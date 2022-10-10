@@ -1,0 +1,16 @@
+Description: POD language: 'allows to' → 'allows one to'
+Author: Damyan Ivanov <dmn@debian.org>
+Forwarded: https://rt.cpan.org/Ticket/Display.html?id=142937
+Bug: https://rt.cpan.org/Ticket/Display.html?id=142937
+
+--- a/lib/Expect.pm
++++ b/lib/Expect.pm
+@@ -2299,7 +2299,7 @@ from fileno 7) or `STDIN'. Useful for de
+ =item $object->restart_timeout_upon_receive(0 | 1)
+ 
+ If this is set to 1, the expect timeout is retriggered whenever something
+-is received from the spawned command.  This allows to perform some
++is received from the spawned command.  This allows one to perform some
+ aliveness testing and still expect for patterns.
+ 
+     $exp->restart_timeout_upon_receive(1);
